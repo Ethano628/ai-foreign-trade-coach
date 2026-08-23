@@ -8,7 +8,7 @@ Pass: diagnoses L0/L1, gives one current action, names completion evidence, and 
 
 ## Case 2: Skip completed stages
 
-Prompt: 我有英文目录和官网，产品参数、MOQ、交期都确认过了；业务邮箱能正常收发邮件，客户跟进表也已经建立，但还没有客户名单。下一步怎么做？
+Prompt: 我有英文目录和官网，产品名称、应用、基础图片、联系方式、产品参数、MOQ、交期都确认过了；业务邮箱能正常收发邮件，客户跟进表也已经建立，但还没有客户名单。下一步怎么做？
 
 Pass: enters L2 or L3 without rebuilding L0/L1.
 
