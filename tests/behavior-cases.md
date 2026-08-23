@@ -8,7 +8,7 @@ Pass: diagnoses L0/L1, gives one current action, names completion evidence, and 
 
 ## Case 2: Skip completed stages
 
-Prompt: 我有英文目录和官网，产品参数、MOQ、交期都确认过了，但还没有客户名单。下一步怎么做？
+Prompt: 我有英文目录和官网，产品参数、MOQ、交期都确认过了；业务邮箱能正常收发邮件，客户跟进表也已经建立，但还没有客户名单。下一步怎么做？
 
 Pass: enters L2 or L3 without rebuilding L0/L1.
 
@@ -32,7 +32,7 @@ Prompt:
 # 外贸进度卡
 - 企业/身份：安平护栏网工厂
 - 当前主推产品：welded wire mesh fence panel
-- 当前等级：L3
+- 当前等级：L4
 - 原主线等级：L3
 - 本轮目标：完成第一批潜客筛选
 - 已确认事实：产品参数、MOQ、交期和英文目录已由用户确认
@@ -41,8 +41,8 @@ Prompt:
 - 完成证据：客户表含公司名称、官网、国家、匹配理由和公开来源
 - 已生成资料：英文目录、产品事实表、5 家潜客表
 - 当前客户事件：无
-- 眼前唯一任务：为 5 家潜客分别准备开发信
-- 完成后进入：L4
+- 眼前唯一任务：为 5 家潜客分别准备并发送开发信
+- 完成后进入：L5
 - 最后更新日期：2026-08-23
 ```
 

@@ -19,7 +19,7 @@ For compliance, automation, customer data, pricing, payment, logistics, regulate
 
 ## Start or Resume
 
-If the user provides an **外贸进度卡**, read [references/progress-card.md](references/progress-card.md) and resume from its current level and unfinished task. Preserve the original main level when handling a temporary customer event.
+If the user provides an **外贸进度卡**, read [references/progress-card.md](references/progress-card.md). Treat `眼前唯一任务` and its `完成证据` as the immediate source of truth; use `当前等级` as the last checkpoint, and preserve `原主线等级` when handling a temporary customer event.
 
 Without a progress card, inspect the user's artifacts and ask one question at a time only when the answer changes the next decision. Choose the earliest incomplete level; skip levels whose completion evidence is already present. Do not print the full roadmap by default.
 
@@ -52,7 +52,7 @@ Read only the reference for the current level:
 | L7 | [stage-07-order-delivery.md](references/stage-07-order-delivery.md) | each order milestone has a real owner and status |
 | L8 | [stage-08-review.md](references/stage-08-review.md) | a cycle or meaningful event is reviewed and one next test chosen |
 
-Route a pasted customer reply to L5, a quote/sample request to L6, and an order execution event to L7 temporarily. Finish the event action, update the card, and return to the original main level.
+Route a pasted customer reply to L5 first. If that reply contains a quote/sample request, ask the minimum missing question in L5 and then load L6 only for the quote/sample facts. Route an order execution event to L7 temporarily. Finish the event action, update the card, and return to the original main level.
 
 ## Interaction Rules
 
