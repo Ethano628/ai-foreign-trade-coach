@@ -1,61 +1,60 @@
 # AI Foreign Trade Coach
 
-An open-source AI skill that helps manufacturers start B2B export business from 0 to 1.
+An open-source AI skill for manufacturers who have a real product or factory resource and need to start B2B export one concrete step at a time.
 
-## What it does
+## What changed
 
-This skill helps a user who has a factory, product, or supply-chain resource but little foreign-trade experience turn a vague export idea into an actionable export-start plan.
+This is a staged operating coach, not a one-shot 30-day plan. It first identifies the earliest incomplete level, completes AI-owned work, gives the user one action, checks observable evidence, and updates an **外贸进度卡** before advancing.
 
-It is designed for questions like:
+```text
+L0 工作台
+ -> L1 产品资料包
+ -> L2 市场与客户画像
+ -> L3 五家潜客试样
+ -> L4 定制开发信
+ -> L5 回复与跟进
+ -> L6 报价/样品/谈判
+ -> L7 订单/物流/单证
+ -> L8 数据复盘
+```
 
-> “We manufacture stainless steel bottles. We have only sold domestically before, and now we want to start exporting. Where should we begin?”
+When a real customer reply, quote request, or order event appears, the coach temporarily handles that event and then returns to the original main level.
 
-The skill guides the user through:
+## Target user
 
-- Product and business diagnosis
-- Export readiness assessment
-- Priority market selection
-- ICP customer profiles
-- Buyer-facing value proposition
-- Competitor and market research
-- Customer-development channels
-- Prospect search and screening
-- First outreach and follow-up
-- Quotation, sample, payment, logistics, and review notes
-- A 30-day action plan
+Chinese factory owners or factory salespeople with a product, production capability, or supply-chain access, but little experience developing overseas B2B customers.
 
-## V1 scope
+## Explicit non-goals
 
-V1 focuses on the **manufacturer-to-export** workflow.
-
-It is not a foreign-trade encyclopedia, CRM, lead database, customs-data tool, or automated email sender.
-
-Completion means the user can begin the first batch of qualified prospecting and outreach. It does not guarantee inquiries, orders, or revenue.
+The skill does not teach AI installation, platform onboarding, overseas-network setup, or commercial services. It does not provide automated bulk outreach, private-data scraping, platform bypasses, fabricated customer information, or certainty about orders, taxes, customs, sanctions, or regulated products. It does not attempt to be a complete social-media, SEO, independent-site, GEO, brand, or marketplace operations manual.
 
 ## Files
 
 ```text
 ai-foreign-trade-coach/
 ├── SKILL.md
-├── agents/
-│   └── openai.yaml
+├── agents/openai.yaml
+├── tests/behavior-cases.md
 └── references/
-    ├── boundaries.md
-    ├── manufacturer-playbook.md
-    └── output-templates.md
+    ├── stage-00-workbench.md
+    ├── stage-01-product-kit.md
+    ├── stage-02-market-icp.md
+    ├── stage-03-prospecting.md
+    ├── stage-04-outreach.md
+    ├── stage-05-replies.md
+    ├── stage-06-quotation.md
+    ├── stage-07-order-delivery.md
+    ├── stage-08-review.md
+    ├── progress-card.md
+    └── boundaries.md
 ```
 
-## Safety boundaries
+`manufacturer-playbook.md` and `output-templates.md` remain as compatibility routers for earlier callers. They no longer contain a full one-shot output template.
 
-This skill supports human-reviewed B2B export planning. It does not:
+## Completion boundary
 
-- Guarantee orders or business results
-- Fabricate customer information, purchase intent, certifications, or verified contacts
-- Replace legal, tax, customs, sanctions, or regulated-product advice
-- Support automated bulk sending, spam, impersonation, or platform-rule bypassing
+The first milestone is that the user has prepared real product material, checked a small batch of real prospects, and sent the first manually reviewed outreach messages. This does not guarantee replies, orders, or revenue.
 
 ## 中文说明
 
-这是一个开源 AI Skill，目标是帮助“有产品 / 有工厂 / 有供应链，但不懂外贸”的用户，从 0 开始生成一份可执行的《外贸启动作战方案》。
-
-V1 聚焦中国工厂从内贸或代工思维走向 B2B 外贸获客，不追求覆盖所有外贸知识，也不承诺拿到订单。它更像一个 AI 外贸启动教练：先帮用户判断产品、市场、客户画像、渠道、开发信和 30 天行动计划。
+这是一个给中国工厂使用的阶梯式 AI 外贸教练。它不再一上来输出一份大而全的方案，而是从当前缺口开始，每次只带用户完成一个外贸动作，用真实完成证据决定下一步，并通过《外贸进度卡》跨对话继续。
