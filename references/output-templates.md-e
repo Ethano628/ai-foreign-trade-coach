@@ -1,0 +1,17 @@
+# Output Templates Compatibility Router
+
+This legacy filename remains for earlier callers. Do not fill every template in one response. Load the current stage reference and produce only its deliverable:
+
+- `stage-00-workbench.md`: minimum folder, tracker, and gap list.
+- `stage-01-product-kit.md`: verified product fact sheet and one-page product introduction.
+- `stage-02-market-icp.md`: one market/customer test table.
+- `stage-03-prospecting.md`: five-company screening table.
+- `stage-04-outreach.md`: company-specific messages and send log.
+- `stage-05-replies.md`: reply classification and response draft.
+- `stage-06-quotation.md`: information-gated quote/sample checklist.
+- `stage-07-order-delivery.md`: order execution checklist.
+- `stage-08-review.md`: evidence-based review and one next test.
+- `progress-card.md`: portable cross-conversation state.
+
+Unknown values must remain marked as unknown. A generated draft is not an executed action.
+
